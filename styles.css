@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+:root {
+    --clancyColor: red;
+    --linkColor: rgb(9, 72, 126);
+    font-family: 'Roboto Slab', 'Roboto', sans-serif;
+}
+
+input:valid {
+    border: 1px solid rgb(84, 157, 220, 60%);
+}
+
+input:focus:valid {
+    background-color: rgba(90, 176, 251, 0.1);
+}
+
+input:invalid {
+    border: 1px solid rgb(234, 12, 12, 30%);
+}
+
+#message {
+    display:none;
+    background: #f1f1f1;
+    border: 1px dotted #c6c1c1;
+    color: #000;
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem;
+    height: 10rem;
+    width: 10rem;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+a:link {
+    text-decoration: none;
+    color: var(--linkColor);
+}
+
+a:visited { 
+    text-decoration:none;
+    color: var(--linkColor);
+   }
+
+body {
+    background-color: rgba(99, 105, 99, 0.1);
+    margin: 0;
+}
+
+body, .formContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.leftSidebar, .signUpContainer, .heroContainer, .informationContainer, .formLeft, .formRight, .accountContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.leftSidebar {
+    background-image: url(leftSideImage.png);
+    position: relative;
+    height: 100vh;
+    min-width: 22rem;
+    width: 30%;
+}
+
+.logoContainer {
+    display: flex;
+    position: relative;
+    top: 30%;
+    width: 100%;
+    background-color: rgba(47, 53, 47, 0.3);
+    align-items: center;
+}
+
+.logo {
+    background-image: url(Clancy-Carraway.jpg);
+    height: 100px;
+    width: auto;
+    opacity: 100%;
+    border-radius: 15px;
+    margin-left: 20px;
+}
+
+.logoText {
+    color: white;
+    font-size: 48px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.credit {
+    position: absolute;
+    bottom: 10px;
+    background-color: aliceblue;
+}
+
+.signUpContainer {
+    align-self: center;
+}
+
+.heroContainer, .informationContainer, .formContainer, .accountContainer {
+    padding: 30px;
+    gap: 20px;
+}
+
+.formLeft, .formRight {
+    gap: 15px;
+}
+
+.informationContainer {
+    background-color: white;
+    box-shadow: 2px 3px rgb(226, 221, 221);
+    border-radius: 5px;
+}
+
+.formContainer {
+    max-width: 350px;
+}
+
+.heroText {
+    font-weight: 500;
+}
+
+.formText {
+    font-size: 12.5px;
+    font-variant-caps: all-small-caps;
+}
+
+.submitButton {
+    background-color: var(--linkColor);
+    color: aliceblue;
+    text-align: center;
+    width: 230px;
+    height: 90px;
+    border-radius: 7px;
+    padding: 30px 50px;
+    font-size: 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+  
+  .submitButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .submitButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.7s;
+  }
+  
+  .submitButton:hover span {
+    padding-right: 25px;
+  }
+  
+  .submitButton:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .submitButton:active {
+    background-color: #5e95c8;
+    transform: translateY(4px);
+  }
+
+  #confirm_password, #confPassword {
+    display: none;
+  }
